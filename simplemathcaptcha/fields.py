@@ -45,7 +45,7 @@ class MathCaptchaField(forms.MultiValueField):
 
     def _extract_widget_params(self, kwargs):
         params = {}
-        for key in ('start_int', 'end_int'):
+        for key in ('start_int', 'end_int', 'question_tmpl'):
             if key in kwargs:
                 params[key] = kwargs.pop(key)
         return params

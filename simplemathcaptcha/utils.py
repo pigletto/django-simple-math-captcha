@@ -5,7 +5,10 @@ from random import randint, choice
 from hashlib import sha1
 
 from django.conf import settings
-from django.utils import six
+try:
+    from django.utils import six
+except ImportError:
+    import six
 
 MULTIPLY = '*'
 ADD = '+'
